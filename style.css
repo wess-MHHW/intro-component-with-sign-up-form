@@ -1,0 +1,245 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* || VARIABLES */
+:root {
+  /* COLORS */
+  --clr-blue: hsl(248, 32%, 49%);
+  --clr-dark-blue: hsl(249, 10%, 26%);
+  --clr-grayish-blue: hsl(246, 25%, 77%);
+  --clr-green: hsl(154, 59%, 51%);
+  --clr-red: hsl(0, 100%, 74%);
+
+  /* FONTS */
+  --ff-poppins: "Poppins", sans-serif;
+}
+
+/* || RSET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* || GENERAL STYLES */
+html {
+  font-family: var(--ff-poppins);
+}
+
+body {
+  background-color: var(--clr-red);
+  background-image: url(./images/bg-intro-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+}
+
+main {
+  margin-bottom: 4rem;
+  margin-inline: 1.5rem;
+  margin-top: 6rem;
+  max-width: 40rem;
+  text-align: center;
+}
+
+.description__title {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+}
+
+.description__text {
+  color: white;
+  line-height: 1.5;
+  margin-top: 2rem;
+}
+
+.offer {
+  background-color: var(--clr-blue);
+  border-radius: 10px;
+  box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.2);
+  color: white;
+  margin-bottom: 1.5rem;
+  margin-top: 3.5rem;
+  padding: 1rem 3rem;
+}
+
+.offer__text {
+  font-weight: 400;
+}
+
+.offer__text span {
+  font-weight: 600;
+}
+
+#form {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 7px 0px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+}
+
+.field {
+  all: unset;
+  border-radius: 5px;
+  border: 1px solid var(--clr-grayish-blue);
+  box-sizing: border-box;
+  color: var(--clr-dark-blue);
+  font-family: var(--ff-poppins);
+  font-weight: 600;
+  padding: 1rem 3.5rem 1rem 1rem;
+  text-align: left;
+  width: 100%;
+}
+
+.first-name,
+.last-name,
+.email,
+.password {
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.first-name__icon-error,
+.last-name__icon-error,
+.email__icon-error,
+.password__icon-error {
+  opacity: 0;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.invalid .wrong {
+  border: 2px solid var(--clr-red);
+}
+
+.invalid .error {
+  display: block;
+}
+
+.invalid .icon {
+  opacity: 1;
+}
+
+.first-name__error,
+.last-name__error,
+.email__error,
+.password__error {
+  color: var(--clr-red);
+  display: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: right;
+}
+
+.invalid .field::placeholder {
+  color: var(--clr-red);
+  font-weight: 500;
+}
+
+.field::placeholder {
+  color: var(--clr-dark-blue);
+  font-family: var(--ff-poppins);
+  font-weight: 600;
+}
+
+.field:focus {
+  border: 1px solid var(--clr-dark-blue);
+}
+
+.invalid .field:focus {
+  border: 1px solid var(--clr-red);
+}
+
+.submit-btn {
+  all: unset;
+  background-color: hsla(154, 59%, 51%, 0.867);
+  border-radius: 5px;
+  box-sizing: border-box;
+  color: white;
+  font-family: var(--ff-poppins);
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  text-align: center;
+  text-transform: uppercase;
+  width: 100%;
+  box-shadow: inset 1px -3px 0px hsl(154, 59%, 51%),
+    inset -1px 1px 0px hsl(154, 59%, 51%);
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.explanation {
+  color: var(--clr-grayish-blue);
+  font-size: 0.75rem;
+  line-height: 1.5;
+  margin-inline: 1rem;
+}
+
+.explanation span {
+  color: var(--clr-red);
+  font-weight: 600;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-image: url(./images/bg-intro-desktop.png);
+  }
+
+  main {
+    align-items: center;
+    column-gap: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 0rem;
+    margin-inline: 2rem;
+    margin-top: 0rem;
+    max-width: 70rem;
+    text-align: left;
+  }
+
+  .description {
+    flex: 1;
+  }
+
+  .description__title {
+    font-size: 3rem;
+  }
+
+  .description__text {
+    line-height: 1.7;
+  }
+
+  .inscription {
+    flex: 1;
+  }
+
+  #form {
+    padding: 2rem;
+  }
+
+  .offer {
+    margin-top: 0;
+
+    padding: 1.5rem 3rem;
+  }
+
+  .explanation {
+    text-align: center;
+  }
+
+  .first-name,
+  .last-name,
+  .email,
+  .password {
+    margin-bottom: 1.5rem;
+  }
+}
